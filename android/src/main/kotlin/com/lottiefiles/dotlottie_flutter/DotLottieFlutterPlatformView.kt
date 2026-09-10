@@ -517,8 +517,8 @@ class DotLottiePlatformView(
                                 markers.map { marker ->
                                     mapOf<String, Any>(
                                             "name" to marker.name,
-                                            "time" to marker.time,
-                                            "duration" to marker.duration
+                                            "time" to marker.start,
+                                            "duration" to marker.end - marker.start
                                     )
                                 }
                         result.success(markerList)
